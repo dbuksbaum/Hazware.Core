@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+ <metadata>
+   <id>Hazware.Core</id>
+   <version>1.0</version>
+   <title>Hazware.Core</title>
+   <authors>David Buksbaum</authors>
+   <description>Utility and core classes frequently used in my projects.</description>
+   <summary>Yet another collection of frequently used utility code. This library contains the base on which all my other projects tend to use. Specifically, it contains implementions of disposal pattern, and fluent configuration for MEF. Source code with sample projects available at https://github.com/dbuksbaum/Hazware.Core</summary>
+   <language>en-US</language>
+   <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+   <projectUrl>http://www.buksbaum.us/</projectUrl>
+   <requireLicenseAcceptance>true</requireLicenseAcceptance>
+   <tags>Hazware Utility Disposal MEF</tags>
+  </metadata>
+  <files>
+    <file src="lib\net40\Hazware.Core.dll" target="lib\net40\Hazware.Core.dll" />
+    <file src="lib\net40-client\Hazware.Core.dll" target="lib\net40-client\Hazware.Core.dll" />
+    <file src="lib\sl4\Hazware.Core.dll" target="lib\sl4\Hazware.Core.dll" />
+  </files>
+</package>

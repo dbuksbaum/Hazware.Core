@@ -7,7 +7,8 @@ Source code to the [Hazware.Core nuget package](http://nuget.org/List/Packages/H
 See [github](https://github.com/dbuksbaum/Hazware.Core)
 
 __Version 1.0 - 2011/08/14__
-* Initial Check In
-* Implemented IDisposal2, AbstractDisposal, DisposableAction, RepeatableDisposableAction, and CatalogConfigurator
-* Compiled for .NET 4, NET 4 Client Profile, and Silverlight 4
-* Create NuGet package for Hazware.Core
+
+	* Initial Check In
+	* Implemented IDisposal2, AbstractDisposal, DisposableAction, RepeatableDisposableAction, and CatalogConfigurator
+	* Compiled for .NET 4, NET 4 Client Profile, and Silverlight 4
+	* Create NuGet package for Hazware.Core

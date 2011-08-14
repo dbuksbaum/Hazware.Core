@@ -1,0 +1,1 @@
+The Hazware.Core project is making use concepts learned over time and many open source examples from all over the web.
