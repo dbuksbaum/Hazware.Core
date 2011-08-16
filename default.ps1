@@ -60,7 +60,7 @@ task PublishToNuget -depends CreateNugetPackage {
 
   if($nuget_push -eq "true") {
     Write-Host "Pushing and Publishing to Nuget: $sln_base.$version.nupkg"
-  	#&"nuget" push -source http://packages.nuget.org/v1/ "$sln_base.$version.nupkg" $accessKey
+  	&"nuget" push -source http://packages.nuget.org/v1/ "$sln_base.$version.nupkg" $accessKey
   }
   else {
     Write-Host "Suppressing Push and Publishing to Nuget: $sln_base.$version.nupkg"
