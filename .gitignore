@@ -11,6 +11,8 @@
 *.nupkg
 # Include dlls if they’re in the NuGet packages directory
 !/packages/*/lib/*.dll
+# Include everything if they’re in the NuGet tools directory
+!/packages/*/tools/*.*
 # VS Upgrade stuff #
 ####################
 UpgradeLog.XML
