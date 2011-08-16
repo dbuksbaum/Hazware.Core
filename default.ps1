@@ -20,11 +20,15 @@ properties {
   $upload_category = "Hazware.Core"
   $v4_net_version = (ls "$env:windir\Microsoft.NET\Framework\v4.0*").Name
   $project_base = "$src_dir\$sln_base"
+  $test_src_dir = "$base_dir\tests"
+  $test_run_dir = "$build_dir\tests"
+  $nunit_runner = "$base_dir\packages\NUnit.2.5.10.11092\tools\nunit-console.exe"
 
   $project_dlls = @( "Hazware.Core.dll" );
+  $test_prjs = @( "Hazware.Core.Tests-NET4" );  
 
   $platforms = @( "NET4", "NET4CP", "SL4" );
-  $build_dirs = @( $release_dir, $build_dir );
+  $build_dirs = @( $release_dir, $build_dir, $test_run_dir );
   $nupack_dirs = @(	"NuPack", "NuPack\lib", "NuPack\lib\net40", "NuPack\lib\net40-client", "NuPack\lib\sl4" );
 }
 
@@ -110,7 +114,7 @@ task CreateNugetPackage -depends Release {
   &"nuget" pack $build_dir\NuPack\$sln_base.nuspec
 }
 
-task Release -depends CopyBuildFiles {
+task Release -depends Test {
 	$global:uploadCategory = $upload_category
 }
 
@@ -118,18 +122,28 @@ task Samples -depends CopyBuildFiles {
 	exec { &"c:\Windows\Microsoft.NET\Framework\$v4_net_version\MSBuild.exe" "`"$samples_sln_file`" /v:$verbosity /t:$target /p:Configuration=$config" }
 }
 
-task Test -depends CopyBuildFiles {
+task Test -depends CopyTestFiles {
   $old = pwd
-  cd $build_dir
   Write-Host $test_prjs
   foreach($test_prj in $test_prjs) {
-    Write-Host "Testing $build_dir\$test_prj"
+    cd $test_run_dir\$test_prj
+    Write-Host "Testing $test_src_dir\$test_prj"
+	  exec { &"$nunit_runner" "$test_prj.dll" }
+    cd $old
   }
-  cd $old
+  #cd $old
+}
+
+task CopyTestFiles -depends CopyBuildFiles {
+  foreach($test_prj in $test_prjs) {
+  	if(Test-Path "$test_src_dir\$test_prj")
+  	{	#	copy test output
+	    cp "$test_src_dir\$test_prj\bin\$config\*.*" $test_run_dir\$test_prj
+		}
+ 	}
 }
 
 task CopyBuildFiles -depends Compile {
-
   foreach($platform in $platforms) {
   	if(Test-Path "$project_base-$platform")
   	{	#	copy base project
@@ -197,6 +211,10 @@ task Init -depends SetVsPaths, Verify40, Clean, DisplayConfig {
 		new-item "$build_dir\$platform" -itemType directory -ErrorAction SilentlyContinue
 		new-item "$release_dir\$platform" -itemType directory -ErrorAction SilentlyContinue
   }
+
+  foreach($new_dir in $test_prjs) {
+		new-item $test_run_dir\$new_dir -itemType directory -ErrorAction SilentlyContinue
+	}
 }
 
 task SetVsPaths {
