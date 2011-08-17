@@ -22,7 +22,7 @@ properties {
   $project_base = "$src_dir\$sln_base"
   $test_src_dir = "$base_dir\tests"
   $test_run_dir = "$build_dir\tests"
-  $nunit_runner = "$base_dir\packages\NUnit.2.5.10.11092\tools\nunit-console.exe"
+  $nunit_runner = "$base_dir\tools\nunit\nunit-console.exe"
 
   $project_dlls = @( "Hazware.Core.dll" );
   $test_prjs = @( "Hazware.Core.Tests-NET4" );  
