@@ -128,7 +128,8 @@ task Test -depends CopyTestFiles {
   foreach($test_prj in $test_prjs) {
     cd $test_run_dir\$test_prj
     Write-Host "Testing $test_src_dir\$test_prj"
-	  exec { &"$nunit_runner" "$test_prj.dll" }
+	  exec { &"$nunit_runner" "`"$test_prj.dll`" /xml=..\$test_prj.xml" }
+		#exec { &"$nunit_runner" "`"$slnFile`" /v:$verbosity /t:$target /p:Configuration=$config" }
     cd $old
   }
   #cd $old
