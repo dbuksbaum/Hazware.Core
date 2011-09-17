@@ -1,0 +1,7 @@
+The Hazware.Core project is making use of concepts learned over time and many open source examples from all over the web.
+
+Autofac
+FluentAssertions
+FakeItEasy
+NUnit
+psake
