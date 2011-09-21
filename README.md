@@ -42,22 +42,22 @@ __Version 2.0 - 2011/09/XX__
   + Added ApplicationEnvironment (.NET Full and .NET Client Profile Only)  
   
   __To-Do__  
-  + Add unit tests for IEnumerable extension methods (_in process_)
-  + Add unit tests for Action extension methods
-  + Add unit tests for Func extension methods
-  + Add unit tests for IQueryable extension methods
-  + Add unit tests for String extension methods
-  + Add unit tests for DisposableAction
-  + Add unit tests for RepeatableDisposableAction
-  + Add unit tests for ResolveAnythingSource
-  + Add unit tests for core logging
-  + Add unit tests for Autofac logging
-  + Add unit tests for log4net logging
-  + Add unit tests for NLog logging
-  + Build NuGet pakacge for Core (.NET4, .NET4CP, SL4)
-  + Build NuGet pakacge for Core.Autofac (.NET4, .NET4CP, SL4)
-  + Build NuGet pakacge for Logging log4net (.NET4)
-  + Build NuGet pakacge for Logging NLog (.NET4, .NET4CP, SL4)
+  + Add unit tests for IEnumerable extension methods (_in process_)  
+  + Add unit tests for Action extension methods  
+  + Add unit tests for Func extension methods  
+  + Add unit tests for IQueryable extension methods  
+  + Add unit tests for String extension methods  
+  + Add unit tests for DisposableAction  
+  + Add unit tests for RepeatableDisposableAction  
+  + Add unit tests for ResolveAnythingSource  
+  + Add unit tests for core logging  
+  + Add unit tests for Autofac logging  
+  + Add unit tests for log4net logging  
+  + Add unit tests for NLog logging  
+  + Build NuGet pakacge for Core (.NET4, .NET4CP, SL4)  
+  + Build NuGet pakacge for Core.Autofac (.NET4, .NET4CP, SL4)  
+  + Build NuGet pakacge for Logging log4net (.NET4)  
+  + Build NuGet pakacge for Logging NLog (.NET4, .NET4CP, SL4)  
 
 __Version 1.0 - 2011/08/14__
 
