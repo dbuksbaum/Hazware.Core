@@ -54,6 +54,10 @@ __Version 2.0 - 2011/09/XX__
   + Add unit tests for Autofac logging
   + Add unit tests for log4net logging
   + Add unit tests for NLog logging
+  + Build NuGet pakacge for Core (.NET4, .NET4CP, SL4)
+  + Build NuGet pakacge for Core.Autofac (.NET4, .NET4CP, SL4)
+  + Build NuGet pakacge for Logging log4net (.NET4)
+  + Build NuGet pakacge for Logging NLog (.NET4, .NET4CP, SL4)
 
 __Version 1.0 - 2011/08/14__
 
