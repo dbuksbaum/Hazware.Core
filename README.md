@@ -13,8 +13,11 @@ Source code to the [Hazware.Core nuget package](http://nuget.org/List/Packages/H
 See [github](https://github.com/dbuksbaum/Hazware.Core)
 
 __Version 2.0 - 2011/09/XX__
-  ___Note___
-    All of Hazware.Core.Autofac functionality was contained in the core assembly at one time. It is broken out into different assemblies to allow for core to be used with a dependency on Autofac
+
+  ___Note___  
+    All of Hazware.Core.Autofac functionality was contained in the core assembly at one time. It is 
+    broken out into different assemblies to allow for core to be used with a dependency on Autofac
+
   + New Assembly: Hazware.Core.Autofac - this is the autofac based container logic
     + **Added dependency on Autofac 2.5.2.830**
     + Added ResolveAnythingSource
@@ -36,15 +39,21 @@ __Version 2.0 - 2011/09/XX__
   + Added INamedProvider interface
   + Added default logging support
   + Added AssemblyVersionInfo (.NET Full and .NET Client Profile Only)
-  + Added ApplicationEnvironment (.NET Full and .NET Client Profile Only)
-  _TODO_
+  + Added ApplicationEnvironment (.NET Full and .NET Client Profile Only)  
+  
+  __To-Do__
   + Add unit tests for IEnumerable extension methods (_in process_)
   + Add unit tests for Action extension methods
   + Add unit tests for Func extension methods
   + Add unit tests for IQueryable extension methods
   + Add unit tests for String extension methods
-  + Add unit test for DisposableAction
-  + Add unit test for RepeatableDisposableAction
+  + Add unit tests for DisposableAction
+  + Add unit tests for RepeatableDisposableAction
+  + Add unit tests for ResolveAnythingSource
+  + Add unit tests for core logging
+  + Add unit tests for Autofac logging
+  + Add unit tests for log4net logging
+  + Add unit tests for NLog logging
 
 __Version 1.0 - 2011/08/14__
 
