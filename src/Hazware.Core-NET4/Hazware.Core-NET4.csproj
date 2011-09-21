@@ -62,14 +62,12 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractDisposable.cs" />
+    <Compile Include="ApplicationEnvironment.cs" />
+    <Compile Include="AssemblyVersionInfo.cs" />
     <Compile Include="Collections\Generic\INamedProvider.cs" />
     <Compile Include="Collections\Generic\IProvider.cs" />
     <Compile Include="ComponentModel\Composition\Hosting\CatalogConfigurator.cs" />
@@ -82,6 +80,7 @@
     <Compile Include="Extensions\IQueryableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="IDisposable2.cs" />
+    <Compile Include="Interop\Kernel32\SafeNativeMethods.cs" />
     <Compile Include="IO\CarrierStream.cs" />
     <Compile Include="Logging\AbstractLogger.cs" />
     <Compile Include="Logging\DebugLogger.cs" />

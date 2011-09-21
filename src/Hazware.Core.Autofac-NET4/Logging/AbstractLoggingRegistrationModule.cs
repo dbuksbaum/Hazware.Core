@@ -10,16 +10,18 @@ namespace Hazware.Logging
 {
   public abstract class AbstractLoggingRegistrationModule : Module
   {
+    public const string MefExportTag = "HL_Logging";
+
     #region Fields
     private readonly ILogProvider _provider;
     #endregion
 
     #region Constructors
-//    protected AbstractLoggingRegistrationModule(Type logWrapper)
-//      : this(type =>
-//        (ILog)Activator.CreateInstance(logWrapper.MakeGenericType(type)))
-//    {
-//    }
+    protected AbstractLoggingRegistrationModule(Type logWrapper)
+      : this(type =>
+        (ILog)Activator.CreateInstance(logWrapper.MakeGenericType(type)))
+    {
+    }
     protected AbstractLoggingRegistrationModule(Func<Type, ILog> creator)
       : this(new LogProvider(creator))
     {

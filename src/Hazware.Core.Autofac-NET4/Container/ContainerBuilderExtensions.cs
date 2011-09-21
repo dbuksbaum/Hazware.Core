@@ -53,11 +53,12 @@ namespace Hazware.Container
     {
       return UseLoggerFactory(builder, DefaultLogFactories.DebugLoggerFactory);
     }
+#if !SILVERLIGHT
     public static ContainerBuilder UseTraceLogger(this ContainerBuilder builder)
     {
       return UseLoggerFactory(builder, DefaultLogFactories.TraceLoggerFactory);
     }
-
+#endif
     private static void CheckIfLoggerInitialized(ContainerBuilder builder)
     {
       //  prune disposed builders

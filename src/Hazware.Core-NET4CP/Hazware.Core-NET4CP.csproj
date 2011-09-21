@@ -35,15 +35,17 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Hazware.Core-NET4\AbstractDisposable.cs">
       <Link>AbstractDisposable.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\ApplicationEnvironment.cs">
+      <Link>ApplicationEnvironment.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="..\Hazware.Core-NET4\Collections\Generic\INamedProvider.cs">
       <Link>Collections\Generic\INamedProvider.cs</Link>
@@ -80,6 +82,9 @@
     </Compile>
     <Compile Include="..\Hazware.Core-NET4\IDisposable2.cs">
       <Link>IDisposable2.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Interop\Kernel32\SafeNativeMethods.cs">
+      <Link>Interop\Kernel32\SafeNativeMethods.cs</Link>
     </Compile>
     <Compile Include="..\Hazware.Core-NET4\IO\CarrierStream.cs">
       <Link>IO\CarrierStream.cs</Link>

@@ -13,11 +13,20 @@ Source code to the [Hazware.Core nuget package](http://nuget.org/List/Packages/H
 See [github](https://github.com/dbuksbaum/Hazware.Core)
 
 __Version 2.0 - 2011/09/XX__
-  * Added usage of FluentAssertions to the UnitTests
-  * Added ResolveAnythingSource
-  * **Added dependency on Autofac 2.5.2.830**
-  * Added some documentation to the wiki (https://github.com/dbuksbaum/Hazware.Core/wiki)
-  + Added container support (Autofac based)
+  ___Note___
+    All of Hazware.Core.Autofac functionality was contained in the core assembly at one time. It is broken out into different assemblies to allow for core to be used with a dependency on Autofac
+  + New Assembly: Hazware.Core.Autofac - this is the autofac based container logic
+    + **Added dependency on Autofac 2.5.2.830**
+    + Added ResolveAnythingSource
+    + Added container support (Autofac based)
+    + Added unit tests for container support
+    + Added container support for logging
+  + New Assembly: Hazware.Logging.NLog - this is the NLog based logger
+    + **Added dependency on NLog 2.0.0.2000**
+  + New Assembly: Hazware.Logging.log4net - this is the log4net based logger (.NET 4.0 Full Only)
+    + **Added dependency on log4net 1.2.10**
+  + Added usage of FluentAssertions to the UnitTests
+  + Added some documentation to the wiki (https://github.com/dbuksbaum/Hazware.Core/wiki)
   + Added Action extension methods
   + Added Func extension methods
   + Added IEnumerable extension methods
@@ -25,9 +34,9 @@ __Version 2.0 - 2011/09/XX__
   + Added String extension methods
   + Added IProvider interface
   + Added INamedProvider interface
-  + Added unit tests for container support
   + Added default logging support
-  + Added container support for logging
+  + Added AssemblyVersionInfo (.NET Full and .NET Client Profile Only)
+  + Added ApplicationEnvironment (.NET Full and .NET Client Profile Only)
   _TODO_
   + Add unit tests for IEnumerable extension methods (_in process_)
   + Add unit tests for Action extension methods

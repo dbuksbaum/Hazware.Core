@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A127AE7C-BA0D-417A-8A7B-D3E029A12253}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hazware</RootNamespace>
+    <AssemblyName>Hazware.Core.Autofac</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Container\ContainerBuilderExtensions.cs">
+      <Link>Container\ContainerBuilderExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Container\ContainerConfiguration.cs">
+      <Link>Container\ContainerConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Container\ContainerCreators.cs">
+      <Link>Container\ContainerCreators.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Container\IContainerConfiguration.cs">
+      <Link>Container\IContainerConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Container\ResolveAnythingSource.cs">
+      <Link>Container\ResolveAnythingSource.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Extensions\IContainerExtensions.cs">
+      <Link>Extensions\IContainerExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\IoC.cs">
+      <Link>IoC.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Logging\AbstractLoggingRegistrationModule.cs">
+      <Link>Logging\AbstractLoggingRegistrationModule.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Logging\LogProvider.cs">
+      <Link>Logging\LogProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core.Autofac-NET4\Logging\SimpleLoggingRegistrationModule.cs">
+      <Link>Logging\SimpleLoggingRegistrationModule.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hazware.Core-NET4CP\Hazware.Core-NET4CP.csproj">
+      <Project>{AABF8B2E-8CE8-4103-A344-EEF5EF539E1E}</Project>
+      <Name>Hazware.Core-NET4CP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
