@@ -41,7 +41,7 @@ __Version 2.0 - 2011/09/XX__
   + Added AssemblyVersionInfo (.NET Full and .NET Client Profile Only)
   + Added ApplicationEnvironment (.NET Full and .NET Client Profile Only)  
   
-  __To-Do__
+  __To-Do__  
   + Add unit tests for IEnumerable extension methods (_in process_)
   + Add unit tests for Action extension methods
   + Add unit tests for Func extension methods
