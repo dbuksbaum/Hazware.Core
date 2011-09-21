@@ -70,6 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractDisposable.cs" />
+    <Compile Include="Collections\Generic\INamedProvider.cs" />
+    <Compile Include="Collections\Generic\IProvider.cs" />
     <Compile Include="ComponentModel\Composition\Hosting\CatalogConfigurator.cs" />
     <Compile Include="DisposableAction.cs" />
     <Compile Include="Disposer.cs" />
@@ -81,6 +83,14 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="IDisposable2.cs" />
     <Compile Include="IO\CarrierStream.cs" />
+    <Compile Include="Logging\AbstractLogger.cs" />
+    <Compile Include="Logging\DebugLogger.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\ILogContract.cs" />
+    <Compile Include="Logging\ILogProvider.cs" />
+    <Compile Include="Logging\DefaultLogFactories.cs" />
+    <Compile Include="Logging\NullLogger.cs" />
+    <Compile Include="Logging\TraceLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepeatableDisposableAction.cs" />
   </ItemGroup>

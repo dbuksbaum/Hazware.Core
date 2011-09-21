@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Hazware.Logging;
 
 namespace Hazware.Container
 {
@@ -8,6 +9,7 @@ namespace Hazware.Container
   {
     #region Implementation of IContainerConfiguration
     public bool ResolveAnything { get; set; }
+    public ILogProvider LogProvider { get; set; }
     #endregion
   }
 }

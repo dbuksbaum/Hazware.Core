@@ -17,11 +17,25 @@ __Version 2.0 - 2011/09/XX__
   * Added ResolveAnythingSource
   * **Added dependency on Autofac 2.5.2.830**
   * Added some documentation to the wiki (https://github.com/dbuksbaum/Hazware.Core/wiki)
+  + Added container support (Autofac based)
+  + Added Action extension methods
+  + Added Func extension methods
+  + Added IEnumerable extension methods
+  + Added IQueryable extension methods
+  + Added String extension methods
+  + Added IProvider interface
+  + Added INamedProvider interface
+  + Added unit tests for container support
+  + Added default logging support
+  + Added container support for logging
   _TODO_
+  + Add unit tests for IEnumerable extension methods (_in process_)
+  + Add unit tests for Action extension methods
+  + Add unit tests for Func extension methods
+  + Add unit tests for IQueryable extension methods
+  + Add unit tests for String extension methods
   + Add unit test for DisposableAction
   + Add unit test for RepeatableDisposableAction
-  + Add container support
-  + Add default logging support
 
 __Version 1.0 - 2011/08/14__
 

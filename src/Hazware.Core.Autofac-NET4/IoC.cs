@@ -31,7 +31,7 @@ namespace Hazware
     /// <param name="containerCreator">Delegate that returns a created container</param>
     public static void Initialize(Func<IContainer> containerCreator)
     {
-      Contract.Requires(containerCreator != null);
+      Contract.Requires<ArgumentNullException>(containerCreator != null);
       Initialize(containerCreator());
     }
     /// <summary>
@@ -40,7 +40,7 @@ namespace Hazware
     /// <param name="container">The container.</param>
     public static void Initialize(IContainer container)
     {
-      Contract.Requires(container != null);
+      Contract.Requires<ArgumentNullException>(container != null);
       Contract.Requires<InvalidOperationException>(!IsInitialized, "Cannot initialize when already initialized.");
       _container = container;
     }
@@ -74,6 +74,7 @@ namespace Hazware
     /// <returns>The service</returns>
     public static T Resolve<T>()
     {
+      Contract.Requires<InvalidOperationException>(IsInitialized, "Container is not initialized.");
       return Container.Resolve<T>();
     }
     /// <summary>
@@ -84,6 +85,7 @@ namespace Hazware
     /// <returns>The service</returns>
     public static T Resolve<T>(string name)
     {
+      Contract.Requires<InvalidOperationException>(IsInitialized, "Container is not initialized.");
       return Container.ResolveNamed<T>(name);
     }
     #endregion
@@ -97,6 +99,7 @@ namespace Hazware
     /// <returns>The service or null</returns>
     public static T TryResolve<T>()
     {
+      Contract.Requires<InvalidOperationException>(IsInitialized, "Container is not initialized.");
       return Container.TryResolve<T>();
     }
     /// <summary>
@@ -109,6 +112,7 @@ namespace Hazware
     /// <returns>The service or null</returns>
     public static T TryResolve<T>(string name)
     {
+      Contract.Requires<InvalidOperationException>(IsInitialized, "Container is not initialized.");
       return Container.TryResolve<T>(name);
     }
     /// <summary>
@@ -121,7 +125,9 @@ namespace Hazware
     /// <param name="defaultValue">The default value.</param>
     /// <returns>The service or default</returns>
     public static T TryResolve<T>(T defaultValue)
-    { //  we add the argument specification in case T is a string
+    {
+      Contract.Requires<InvalidOperationException>(IsInitialized, "Container is not initialized.");
+      //  we add the argument specification in case T is a string
       //  and the method resolution things it is tyring to do
       //  TryResolve<T>(name)
 // ReSharper disable RedundantArgumentName
@@ -141,6 +147,7 @@ namespace Hazware
     public static T TryResolve<T>(string name, T defaultValue)
       where T : class
     {
+      Contract.Requires<InvalidOperationException>(IsInitialized, "Container is not initialized.");
       return Container.TryResolve<T>(name, defaultValue);
     }
     #endregion
@@ -152,7 +159,8 @@ namespace Hazware
     /// <returns>Enumeration of services located</returns>
     public static IEnumerable<T> ResolveAll<T>()
     {
-      return TryResolve<IEnumerable<T>>(new T[] {});
+      Contract.Requires<InvalidOperationException>(IsInitialized, "Container is not initialized.");
+      return TryResolve<IEnumerable<T>>(new T[] { });
     }
     #endregion
     #endregion    

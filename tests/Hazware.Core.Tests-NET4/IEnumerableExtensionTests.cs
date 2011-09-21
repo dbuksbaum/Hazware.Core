@@ -4,7 +4,9 @@ using System;
 using NUnit.Framework;
 using Hazware.Extensions;
 
-namespace Hazware.Core.Tests_NET4
+// ReSharper disable CheckNamespace
+namespace Hazware.Tests
+// ReSharper restore CheckNamespace
 {
   [TestFixture, Category("Extension Methods")]
 // ReSharper disable InconsistentNaming

@@ -59,6 +59,12 @@
     <Compile Include="..\Hazware.Core-NET4\AbstractDisposable.cs">
       <Link>AbstractDisposable.cs</Link>
     </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Collections\Generic\INamedProvider.cs">
+      <Link>Collections\Generic\INamedProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Collections\Generic\IProvider.cs">
+      <Link>Collections\Generic\IProvider.cs</Link>
+    </Compile>
     <Compile Include="..\Hazware.Core-NET4\ComponentModel\Composition\Hosting\CatalogConfigurator.cs">
       <Link>ComponentModel\Composition\Hosting\CatalogConfigurator.cs</Link>
     </Compile>
@@ -91,6 +97,27 @@
     </Compile>
     <Compile Include="..\Hazware.Core-NET4\IO\CarrierStream.cs">
       <Link>IO\CarrierStream.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Logging\AbstractLogger.cs">
+      <Link>Logging\AbstractLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Logging\DebugLogger.cs">
+      <Link>Logging\DebugLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Logging\DefaultLogFactories.cs">
+      <Link>Logging\DefaultLogFactories.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Logging\ILog.cs">
+      <Link>Logging\ILog.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Logging\ILogContract.cs">
+      <Link>Logging\ILogContract.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Logging\ILogProvider.cs">
+      <Link>Logging\ILogProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Hazware.Core-NET4\Logging\NullLogger.cs">
+      <Link>Logging\NullLogger.cs</Link>
     </Compile>
     <Compile Include="..\Hazware.Core-NET4\RepeatableDisposableAction.cs">
       <Link>RepeatableDisposableAction.cs</Link>

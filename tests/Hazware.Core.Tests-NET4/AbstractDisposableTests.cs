@@ -5,7 +5,9 @@ using System.Text;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Hazware.Core.Tests_NET4
+// ReSharper disable CheckNamespace
+namespace Hazware.Tests
+// ReSharper restore CheckNamespace
 {
   [TestFixture, Category("Disposal")]
   public class AbstractDisposableTests
