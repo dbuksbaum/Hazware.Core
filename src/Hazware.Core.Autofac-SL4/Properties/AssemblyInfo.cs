@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Hazware.Core.Autofac_SL4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Hazware.Core.Autofac_SL4")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyTitle("Hazware.Core.Autofac 2.0")]
+[assembly: AssemblyDescription("Container abstraction integrated with Autofac.")]
+[assembly: AssemblyConfiguration("Silverlight 4.0")]
+[assembly: AssemblyCompany("David Buksbaum - http://buksbaum.us")]
+[assembly: AssemblyProduct("Hazware.Core.Autofac 2.0")]
+[assembly: AssemblyCopyright("Copyright © David Buksbaum 2009-2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

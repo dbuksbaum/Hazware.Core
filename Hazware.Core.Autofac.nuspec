@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+ <metadata>
+   <id>Hazware.Core.Autofac</id>
+   <version>2.0</version>
+   <title>Hazware.Core.Autofac</title>
+   <authors>David Buksbaum</authors>
+   <description>Container abstraction integrated with Autofac.</description>
+   <summary>A container bootstrapper and abstraction tied to Autofac. Also integrates with the Hazware.Core logging abstraction. Source code with sample projects available at https://github.com/dbuksbaum/Hazware.Core</summary>
+   <language>en-US</language>
+   <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+   <projectUrl>http://www.buksbaum.us/</projectUrl>
+   <requireLicenseAcceptance>false</requireLicenseAcceptance>
+   <tags>Hazware Container Autofac Logging</tags>
+   <dependencies>
+     <dependency id="Hazware.Core" version="2.0" />
+     <dependency id="Autofac" version="2.5.2.830" />
+   </dependencies>
+  </metadata>
+  <files>
+    <file src="src\Hazware.Core.Autofac-NET4\bin\Release\Hazware.Core.Autofac.dll" target="lib\NET40-full\Hazware.Core.Autofac.dll" />
+    <file src="src\Hazware.Core.Autofac-NET4CP\bin\Release\Hazware.Core.Autofac.dll" target="lib\NET40-client\Hazware.Core.Autofac.dll" />
+    <file src="src\Hazware.Core.Autofac-SL4\bin\Release\Hazware.Core.Autofac.dll" target="lib\SL4\Hazware.Core.Autofac.dll" />
+  </files>
+</package>

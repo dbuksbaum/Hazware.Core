@@ -49,6 +49,12 @@
     <Reference Include="Autofac">
       <HintPath>..\..\packages\Autofac.2.5.2.830\lib\SL4\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Hazware.Core">
+      <HintPath>..\..\packages\Hazware.Core.2.0\lib\SL4\Hazware.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hazware.Core.Autofac">
+      <HintPath>..\..\packages\Hazware.Core.Autofac.2.0\lib\SL4\Hazware.Core.Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="NLog">
       <HintPath>..\..\packages\NLog.2.0.0.2000\lib\sl4\NLog.dll</HintPath>
@@ -69,16 +75,6 @@
       <Link>NLogRegistrationModule.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hazware.Core-SL4\Hazware.Core-SL4.csproj">
-      <Project>{98F9492D-0493-4BCB-BDF6-420A2B0B3BF3}</Project>
-      <Name>Hazware.Core-SL4</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hazware.Core.Autofac-SL4\Hazware.Core.Autofac-SL4.csproj">
-      <Project>{3AF4CC32-F832-4C69-AB09-0DB3E62F2F4E}</Project>
-      <Name>Hazware.Core.Autofac-SL4</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

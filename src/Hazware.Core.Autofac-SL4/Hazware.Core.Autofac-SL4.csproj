@@ -49,6 +49,9 @@
     <Reference Include="Autofac">
       <HintPath>..\..\packages\Autofac.2.5.2.830\lib\SL4\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Hazware.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Hazware.Core.2.0\lib\SL4\Hazware.Core.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -89,12 +92,6 @@
       <Link>Logging\SimpleLoggingRegistrationModule.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hazware.Core-SL4\Hazware.Core-SL4.csproj">
-      <Project>{98F9492D-0493-4BCB-BDF6-420A2B0B3BF3}</Project>
-      <Name>Hazware.Core-SL4</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

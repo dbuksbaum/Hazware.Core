@@ -38,6 +38,12 @@
     <Reference Include="Autofac.Configuration">
       <HintPath>..\..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
     </Reference>
+    <Reference Include="Hazware.Core">
+      <HintPath>..\..\packages\Hazware.Core.2.0\lib\NET40-client\Hazware.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hazware.Core.Autofac">
+      <HintPath>..\..\packages\Hazware.Core.Autofac.2.0\lib\NET40-client\Hazware.Core.Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="NLog">
       <HintPath>..\..\packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
     </Reference>
@@ -54,16 +60,6 @@
       <Link>NLogRegistrationModule.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hazware.Core-NET4CP\Hazware.Core-NET4CP.csproj">
-      <Project>{AABF8B2E-8CE8-4103-A344-EEF5EF539E1E}</Project>
-      <Name>Hazware.Core-NET4CP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hazware.Core.Autofac-NET4CP\Hazware.Core.Autofac-NET4CP.csproj">
-      <Project>{A127AE7C-BA0D-417A-8A7B-D3E029A12253}</Project>
-      <Name>Hazware.Core.Autofac-NET4CP</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

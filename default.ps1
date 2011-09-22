@@ -25,7 +25,10 @@ properties {
   $nunit_runner = "$base_dir\tools\nunit\nunit-console.exe"
 
   $project_dlls = @( "Hazware.Core.dll" );
-  $test_prjs = @( "Hazware.Core.Tests-NET4" );  
+  $project_autofac_dlls = @( "Hazware.Core.Autofac.dll" );
+  $project_nlog_dlls = @( "Hazware.Logging.NLog.dll" );
+  $project_nlog_dlls = @( "Hazware.Logging.log4net.dll" );
+  $test_prjs = @( "Hazware.Core.Tests-NET4", "Hazware.Core.Tests-NET4CP", "Hazware.Core.Autofac.Tests-NET4" );
 
   $platforms = @( "NET4", "NET4CP", "SL4" );
   $build_dirs = @( $release_dir, $build_dir, $test_run_dir );
@@ -34,9 +37,9 @@ properties {
 
 include .\psake_ext.ps1
 
-FormatTaskName (("-"*25) + "[{0}]" + ("-"*25))
 
 task default -depends PublishToNuget
+FormatTaskName (("-"*25) + "[{0}]" + ("-"*25))
 
 task PublishToNuget -depends CreateNugetPackage {
   $accessPath = "$base_dir\..\Nuget-Access-Key.txt"
@@ -65,6 +68,9 @@ task PublishToNuget -depends CreateNugetPackage {
   if($nuget_push -eq "true") {
     Write-Host "Pushing and Publishing to Nuget: $sln_base.$version.nupkg"
   	&"nuget" push -source http://packages.nuget.org/v1/ "$sln_base.$version.nupkg" $accessKey
+  	&"nuget" push -source http://packages.nuget.org/v1/ "$sln_base.Autofac.$version.nupkg" $accessKey
+  	&"nuget" push -source http://packages.nuget.org/v1/ "Hazware.Logging.NLog.$version.nupkg" $accessKey
+  	&"nuget" push -source http://packages.nuget.org/v1/ "Hazware.Logging.log4net.$version.nupkg" $accessKey
   }
   else {
     Write-Host "Suppressing Push and Publishing to Nuget: $sln_base.$version.nupkg"

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+ <metadata>
+   <id>Hazware.Logging.log4net</id>
+   <version>2.0</version>
+   <title>Hazware.Logging.log4net</title>
+   <authors>David Buksbaum</authors>
+   <description>log4net Integration with the Hazware Container Abstraction.</description>
+   <summary>log4net integration with the Autofac version of the Hazware Container Abstraction. Source code with sample projects available at https://github.com/dbuksbaum/Hazware.Core</summary>
+   <language>en-US</language>
+   <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+   <projectUrl>http://www.buksbaum.us/</projectUrl>
+   <requireLicenseAcceptance>false</requireLicenseAcceptance>
+   <tags>Hazware Container Autofac Logging NLog</tags>
+   <dependencies>
+     <dependency id="Hazware.Core" version="2.0" />
+     <dependency id="Hazware.Core.Autofac" version="2.0" />
+     <dependency id="Autofac" version="2.5.2.830" />
+     <dependency id="log4net" version="1.2.10" />
+   </dependencies>
+  </metadata>
+  <files>
+    <file src="src\Hazware.Logging.log4net-NET4\bin\Release\Hazware.Logging.log4net.dll" target="lib\NET40-full\Hazware.Logging.log4net.dll" />
+  </files>
+</package>
